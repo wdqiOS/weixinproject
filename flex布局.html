@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid #000;
+            width: 500px;
+            height: 500px;
+            margin-left: 20px;
+            margin-top: 20px;
+            /* flex布局 */
+            display: flex;
+            /* flex方向:row,row-reverse,column,column-reverse */
+            flex-direction: row;
+            /* 主轴对齐方式：flex-start/flex-end/center/space-between/space-around/space-evenly  */
+            justify-content: flex-start;
+            /* 交叉轴对齐方式：flex-start/flex-end/center/space-between：两端对齐（cross start 与 cross end）/space-around/space-evenly/stretch */
+            /* align-items: center; */
+            /* 换行 默认：nowrap-单行 wrap:多行 */
+            /* flex-wrap: wrap; */
+            /* 交叉轴多行对齐：flex-start/flex-end/center/space-between/space-evenly/space-around/stretch */
+            /* align-content: stretch; */
+            /* flex-direction || flex-wrap 的简写 可以写一个，不分顺序 */
+            /* flex-flow: column wrap; */
+            /* 设置flex items 在main corss上的size */
+            /* flex-basis: ; */
+
+
+        }
+        .item{
+            /* auto/content:取决去内容 固定值  */
+            /* flex: flex-grow flex-shrink? || flex-basis的简写 */
+            flex: 0 1 auto;
+            flex-basis: 0;
+            flex-grow: 1;
+            /* width: 50px; */
+            height: 100px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 50px;
+            /* 收缩比例是：flex-shrink * item的size（main axis是row则是宽度，如果是column则是高度。 每个item收缩的size为：超出size * 收缩比例 / 收缩比例之和 */
+            /* 比如：超出的size为300 
+                100 * (100 * 1) / (100 * 1 + 100 * 2 + 100 * 3);
+
+              */
+            /* flex-shrink: 1; */
+        }
+        .item:nth-of-type(1){
+           background-color: #f00; 
+           /* 当flex container在main axis上有剩余size时，才有效 */
+           /* flex-grow: 0.2; */
+           /* flex-shrink: 1; */
+        }
+        .item:nth-of-type(2){
+           background-color: #0f0;
+           /* order越小越排在前面默认为0，相同按照先后顺序排 */
+           /* order: 1;  */
+           /* align-self:覆盖align-items的设置，不设置遵从父类的align-items设置 */
+           /* align-self: flex-start; */
+           /* 当flex container在main axis上有剩余size时，才有效  如果所有flex-grow的和 sum 大于1: size * flex-grow/sum; 如果和sum 小于1: size * flex-grow*/
+           /* flex-grow: 0.2; */
+           /* flex-shrink: 2; */
+        }
+        .item:nth-of-type(3){
+           background-color: #00f;
+           /* align-self: flex-end; */
+           /* 当flex container在main axis上有剩余size时，才有效 */
+           /* flex-grow: 0.8; */
+           /* flex-shrink: 3; */
+        }
+        .item:nth-of-type(4){
+           background-color: #0ff; 
+           /* order: -1; */
+           /* flex-shrink: 4; */
+        }
+        .item:nth-of-type(5){
+           background-color: #f0f; 
+           /* flex-shrink: 5; */
+        }
+        .item:nth-of-type(6){
+           background-color: #fff000; 
+           /* flex-shrink: 6; */
+        }
+        .item:nth-of-type(7){
+           background-color: #333; 
+        }
+        .item:nth-of-type(8){
+           background-color: #111; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
+<!-- 
+    1、flex-flow是flex-direction || flex-wrap的简写
+    2、flex-direction设置主轴（main axis）的方向
+    3、flex-wrap设置是否换行
+    4、justify-content设置flex items在main axis上的对齐方式
+    5、align-items设置flex items在cross axis上的对齐方式（一般用于单行）
+    6、align-content设置flex items在cross axis上的对齐方式（一般用于多行）
+    7、flex是flex-grow flex-shrink? || flex-basis的简写
+    8、flex-grow 决定了flex items在main axis方向上如何扩展默认是0
+    9、flex-shrink 决定了flex items在main axis方向上如何收缩,默认是1
+    10、flex-basis 决定了flex items在main axis方向上的base size
+    11、order设置flex items展示顺序越小越排在前面默认为0，相同按照先后顺序排 
+    12、order-self
+ -->
