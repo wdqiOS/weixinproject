@@ -1,0 +1,11 @@
+<!--cmps/nav-bar/nav-bar.wxml-->
+<view class="container">
+    <view class="status-bar" style="{{ statusBarStyle }}"></view>
+    <view class="nav-bar" style="{{ navBarStyle }}">
+        {{ title }}
+        <view class="icons">
+            <image class="back" wx:if="{{ back == 'true' }}" src="/assets/imgs/ic_tab_home_normal.png" bind:tap="back"></image>
+            <image class="home" wx:if="{{ home == 'true' }}" src="/assets/imgs/ic_tab_profile_normal.png" bind:tap="home"></image>
+        </view>
+    </view>
+</view>

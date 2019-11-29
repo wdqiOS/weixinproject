@@ -1,0 +1,9 @@
+<!--pages/rank/rank.wxml-->
+<nav-bar 
+title="榜单" 
+titleColor="#000"
+navBarColor="#fff"
+statusBarColor="#fff"
+back="false"
+home="false"
+></nav-bar>

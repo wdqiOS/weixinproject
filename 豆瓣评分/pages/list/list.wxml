@@ -1,0 +1,20 @@
+<!-- pages/list/list.wxml -->
+<!-- <import src="/template/nav-bar.wxml" />
+<template is="nav-bar" data="{{ showBack: true, showHome: true}}"></template> -->
+<nav-bar title="{{ title }}" titleColor="#000" back="true" home="true" bind:back="back" bind:home="home"></nav-bar>
+<view class="container">
+    <view class="item" wx:for="{{movies}}" wx:for-item="movie" wx:key="unique">
+        <movie-item movie="{{movie}}"></movie-item>
+    </view>
+</view>
+
+<!-- <view class="container"> 方式一：空白补齐
+    <block 
+    wx:for="{{movies}}" 
+    wx:for-item="movie" 
+    wx:key="unique">
+        <movie-item class="item" movie="{{movie}}"></movie-item>
+    </block>
+    <view wx:if="{{movies.length % 3 > 0}}" class="item hide"></view>
+    <view wx:if="{{movies.length % 3 == 1}}" class="item hide"></view>
+</view> -->

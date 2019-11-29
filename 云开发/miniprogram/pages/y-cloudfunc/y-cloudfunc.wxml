@@ -1,0 +1,24 @@
+<!-- 1. 云函数基本使用：通过云函数 -->
+<button bindtap="basicUsing">云函数基本使用</button>
+
+<!-- 2. 通过云函数获取openid -->
+<button bindtap="getOpenID">获取openID</button>
+<view wx:if="{{ openID }}">{{ openID }}</view>
+
+<!-- 3. 通过云函数删除多条数据 -->
+<!-- 云函数操作数据库权限更大：
+    1：删除、更新、修改，可以根据条件修改多条数据
+    2：查询数据时，最多一次可以查询100条数据（小程序端一次最多可以查询20条数据）
+ -->
+<button bindtap="removeMultidata">删除云数据库多条数据</button>
+
+<!-- 4、通过云调用生成小程序码 -->
+<button bindtap="generateCode">生成小程序码</button>
+<image src="{{fileID}}"></image>
+
+<!-- 5. 发送模板消息 -->
+<!-- report-submit: 为了获取：formid -->
+<form report-submit="true" bindsubmit="formSubmit">
+
+    <button form-type="submit">提交表单</button>
+</form>

@@ -49,6 +49,12 @@
 
               */
             /* flex-shrink: 1; */
+
+            /*
+               如果所有items的flex-shrink之和 < 1 ，那么items不能收缩到刚好在container之内
+               如果所有items的flex-grow之和 < 1 ，那么items不能收缩到刚好填充container
+            */
+
         }
         .item:nth-of-type(1){
            background-color: #f00; 

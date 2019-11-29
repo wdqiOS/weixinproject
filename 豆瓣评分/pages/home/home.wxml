@@ -1,0 +1,53 @@
+<!-- pages/home/home.wxml -->
+<!-- <import src="/template/nav-bar.wxml" />
+<template is="nav-bar" data="{{ showBack: true, showHome: false}}"></template> -->
+
+<!-- <view class="nav-bar">
+    <nav-bar title="首页" titleColor="#fff" navBarColor="#42bd55" statusBarColor="#42bd55" back="false" home="false"></nav-bar>
+</view> -->
+<nav-bar 
+title="首页" 
+titleColor="#fff" 
+navBarColor="#42bd55" 
+statusBarColor="#42bd55" 
+back="false" 
+home="false"></nav-bar>
+
+<view style="margin-top:{{topHeight}}px;">
+    <view class="search-wrapper">
+        <view class="search">
+            <image src="/assets/imgs/ic_search.png" /> 搜索
+        </view>
+    </view>
+    <view class="main">
+        <view class="row" wx:for="{{ allMovies }}" wx:key="unique">
+            <view class="title-wrapper">
+                <view class="title">{{item.title}}</view>
+                <view class="more" bind:tap="viewMore" data-index="{{index}}">
+                    查看更多
+                    <view class="arrow"></view>
+                </view>
+            </view>
+            <scroll-view class="items" scroll-x="true">
+                <block wx:for="{{item.movies}}" wx:for-item="movie" wx:key="unique">
+                    <movie-item class="item" movie="{{movie}}"></movie-item>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+<!-- <view wx:for="{{ item.movies }}" wx:for-item="movie" wx:key class="item">
+    <image class="photo" src="{{movie.images.small}}" />
+    <view class="title">{{movie.title}}</view>
+    <view class="score">
+        <block wx:if="{{movie.stars}}">
+            <view class="stars">
+                <image wx:for="{{movie.stars.on}}" wx:key class="star" src="/assets/imgs/rating_star_small_on.png" />
+                <image wx:if="{{movie.stars.half}}" class="star" src="/assets/imgs/rating_star_small_half.png" />
+                <image wx:for="{{movie.stars.off}}" wx:key class="star" src="/assets/imgs/rating_star_small_off.png" />
+            </view>
+            {{movie.rating.average}}
+        </block>
+        <block wx:else>暂无评分</block>
+    </view>
+</view> -->

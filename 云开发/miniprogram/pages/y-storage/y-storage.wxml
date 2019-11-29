@@ -1,0 +1,22 @@
+<!--pages/y-storage/y-storage.wxml-->
+<!-- 1. 将文件上传到云存储中 -->
+<button bindtap="uploadFile">上传文件</button>
+<image wx:if="{{ imageFileID }}" src="{{ imageFileID }}"></image>
+
+<button bindtap="uploadVideo">上传视频</button>
+<video wx:if="{{ videoFileID }}" src="{{ videoFileID }}"></video>
+<video src="cloud://yun-dev-xsnfv.7975-yun-dev-xsnfv-1258596560/lz.mp4"></video>
+<!-- 2. 获取临时的URL -->
+<!-- 作用：如果云存储中某一个文件，需要在小程序以外的地方进行访问时，就可以通过fileID换取外部访问 -->
+<button bindtap="getTempURL">获取临时链接</button>
+<image src="https://7975-yun-dev-xsnfv-1258596560.tcb.qcloud.la/images/1574858263868_3245fdlajsfldas.png"></image>
+
+<!-- 3. 下载云存储中文件到本地 -->
+<!-- 作用：文件缓存（在没有网路的情况下，也可以访问文件） -->
+<button bindtap="downloadVideoFile">下载视频文件</button>
+<video src="{{ localFilePath }}"></video>
+
+<!-- 4、删除云存储文件 -->
+<button bindtap="deleteFile">删除文件</button>
+
+<!-- <view style="background-image:url({{ imageFileID }});"></view> -->

@@ -1,0 +1,10 @@
+<!--pages/detail/detail.wxml-->
+<nav-bar 
+title="{{ title }}" 
+titleColor="#fff"
+navBarColor="#42bd55"
+statusBarColor="#42bd55"
+back="true"
+home="true"
+></nav-bar>
+<text>pages/detail/detail.wxml</text>

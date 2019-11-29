@@ -1,0 +1,10 @@
+<!--pages/y-database/y-database.wxml-->
+<button bindtap="addDataToDB" type="primary">增加数据</button>
+<button bindtap="removeDataToDB" type="warn">删除数据</button>
+<button bindtap="updateDataToDB" type="primary">修改数据</button>
+<button bindtap="queryDataFromDB" type="primary">查询数据</button>
+
+<button bindtap="startListen">开始监听数据的改变</button>
+
+<button bindtap="sendMessage">发送消息</button>
+

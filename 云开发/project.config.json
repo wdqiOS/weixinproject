@@ -1,0 +1,70 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"enhance": true
+	},
+	"appid": "wx3d6de7f7125f92dc",
+	"projectname": "LearnHYCloud",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "云数据库",
+					"pathName": "pages/y-database/y-database",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云存储",
+					"pathName": "pages/y-storage/y-storage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数",
+					"pathName": "pages/y-cloudfunc/y-cloudfunc",
+					"scene": null
+				}
+			]
+		}
+	}
+}
